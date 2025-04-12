@@ -12,18 +12,17 @@ Document Parser
 npm install
 ```
 
-### Start and Watch server 
+### Start and Watch server
 
 ```sh
 npm run start:dev
 ```
 
-### Request 
+### Request
 
 <p>
     In Postman set key to 'file', value is the PDF file. Send a POST request(form-data) to /parser endpoint 
 </p>
-
 
 ### Set environment variable
 

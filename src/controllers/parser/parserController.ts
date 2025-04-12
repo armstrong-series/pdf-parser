@@ -30,11 +30,13 @@ export class ParserController {
       limits: { fileSize: 10 * 1024 * 1024 },
       fileFilter: (req, file, cb) => {
         if (!file || file.mimetype !== 'application/pdf') {
-          const error = new MulterError('LIMIT_UNEXPECTED_FILE');
-          error.message = 'Only PDF files are allowed';
-          return cb(error, false);
+          cb(
+            new BadRequestException('Invalid file format! Only PDF files'),
+            false,
+          );
+        } else {
+          cb(null, true);
         }
-        cb(null, true);
       },
     }),
   )
