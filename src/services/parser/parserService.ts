@@ -50,12 +50,10 @@ export class ParserService {
       const addressMatch =
         text.match(
           /([A-Za-z0-9\s,\-]+(?:BROOKLYN|NEW YORK CITY|RED HOOK|MANHATTAN|QUEENS|BRONX|NY|NEW YORK))/i,
-        ) || // NYC-specific
-        text.match(/([A-Za-z0-9\s,\-]+\b(?:[A-Z]{2}\b|\d{5}))/i);
+        ) || text.match(/([A-Za-z0-9\s,\-]+\b(?:[A-Z]{2}\b|\d{5}))/i);
       let address = 'Unknown';
       if (addressMatch && addressMatch[1]) {
         address = addressMatch[1].trim();
-        // Append property name if not already included
         if (propertyName !== 'Unknown' && !address.includes(propertyName)) {
           address = `${propertyName}, ${address}`;
         }
