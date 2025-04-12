@@ -12,7 +12,6 @@ import { ParsedData } from '../../interfaces/ParsedData.interface';
 import { Express } from 'express';
 import { ApiResponse, sendResponse } from '../../utils/response.utils';
 import { BasedRouter } from '../../constant/routes';
-import { MulterError } from 'multer';
 import * as multer from 'multer';
 
 @Controller(BasedRouter.PARSER.BASE)
