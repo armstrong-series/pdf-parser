@@ -18,6 +18,13 @@ npm install
 npm run start:dev
 ```
 
+### Request 
+
+<p>
+    In Postman set key to 'file', value is the PDF file. Send a POST request(form-data) to /parser endpoint 
+</p>
+
+
 ### Set environment variable
 
 ```sh

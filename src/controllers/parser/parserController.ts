@@ -52,7 +52,7 @@ export class ParserController {
       );
       const data = await this.parserService.extractFileInfo(file.buffer);
       this.logger.log(`Parsed data: ${JSON.stringify(data)}`);
-      return sendResponse(data, 'PDF parsed successfully');
+      return sendResponse(data, 'Parsed data completed!');
     } catch (error) {
       this.logger.error(
         `Upload failed: ${error instanceof Error ? error.message : 'Unknown error'}`,
